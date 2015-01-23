@@ -9,11 +9,15 @@
     <script  type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script  type="text/javascript" src="js/bootstrap.min.js"></script>
+
     <style>
         .test{
             font-size: 10px;
         }
         #div2{
+            display: none;
+        }
+        #backbtn{
             display: none;
         }
 
@@ -35,14 +39,11 @@
         <p> ta ta tasta
             ta ta tasta
             ta ta tasta</p>
+        <button id="backbtn">Back</button>
+
 
     </div>
-    <div class="container" id="div3">
-        this is the first div
-        <p>i am a paragraph</p>
-        <h1> heading is to show the first div</h1>
-        <button>click me me me</button>
-    </div>
+
 </div>
 
 <script type="text/javascript">
@@ -57,16 +58,15 @@
         });
         $('#hello').click(function(){
             $('#div2').animate({'margin-top':'200px','margin-left':'100px'},2000);
+            $('#backbtn').show();
 
 
         });
-        $('button').click(function(){
-            //$('h1').addClass("test");
-            $('#div3').hide();
-
-
-
+        $('#backbtn').click(function(){
+            $('#div2').animate({'margin-top':'0px','margin-left':'20px'},2000);
         });
+
+
 
 
 
